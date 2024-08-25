@@ -4,7 +4,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
 import Home from "./components/Home/Home";
-import Meals from "./components/Meals";
 import PostDetails from "./components/PostDetails/PostDetails";
 import Posts from "./components/Posts/Posts";
 import UserDetails from "./components/UserDetails/UserDetails";
