@@ -4,11 +4,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Contacts from "./components/Contacts/Contacts";
 import Home from "./components/Home/Home";
+import Meals from "./components/Meals";
+import PostDetails from "./components/PostDetails/PostDetails";
 import Posts from "./components/Posts/Posts";
 import UserDetails from "./components/UserDetails/UserDetails";
 import Users from "./components/Ussers/Users";
 import "./index.css";
-import PostDetails from "./components/PostDetails/PostDetails";
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,9 @@ const router = createBrowserRouter([
       {
         path: "/user/:detailsId",
         loader: ({ params }) =>
-          fetch(`https://jsonplaceholder.typicode.com/users/${params.detailsId}`),
+          fetch(
+            `https://jsonplaceholder.typicode.com/users/${params.detailsId}`
+          ),
         // loader: ({ params }) => console.log(params),
         element: <UserDetails></UserDetails>,
       },
@@ -38,8 +41,9 @@ const router = createBrowserRouter([
       },
       {
         path: "/posts/:postId",
-        loader:({params}) => fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
-        element:<PostDetails></PostDetails>
+        loader: ({ params }) =>
+          fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`),
+        element: <PostDetails></PostDetails>,
       },
       {
         path: "/contacts",

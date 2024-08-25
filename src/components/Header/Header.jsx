@@ -1,23 +1,26 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 const Header = () => {
   return (
     <nav className=" bg-blue-700 text-white font-bold">
       <ul className="flex justify-between mx-4 p-4">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink className="isActive" to="/">
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to="/users">Users</Link>
+          <NavLink to="/users">Users</NavLink>
         </li>
         <li>
-          <Link to="/posts">Posts</Link>
+          <NavLink to="/posts">Posts</NavLink>
         </li>
         <li>
-          <Link to="/contacts">Contacts</Link>
+          <NavLink to="/contacts">Contacts</NavLink>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>
